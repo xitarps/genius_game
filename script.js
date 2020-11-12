@@ -41,8 +41,6 @@ let checkInput = () => {
   return false
 }
 
-
-
 //light pressed button
 let lightButton = (btn) =>{
   switch (btn) {
@@ -94,10 +92,12 @@ let showArray = () => {
     await asyncFunctions.reduce(async (previousPromise, nextAsyncFunction) => {
       await previousPromise;
       const result = await nextAsyncFunction();
+      //prevent cheating/following along
+      clearUserArray()
     }, Promise.resolve());
   })();
   
-  clearUserArray()
+  
 }
 
 //clears user array for the round
@@ -127,7 +127,7 @@ let nextLevel = () => {
 
 //reset all data and restart game
 let restartGame = () => {
-  alert(`Oops, você errou :(\nSua Pontuação é: ${score}\nVamos começar novamente :)!`)
+  alert(`Oops, você errou(ou foi apressado XD!) :(\nSua Pontuação é: ${score}\nVamos começar novamente :)!`)
   order = [];
   clickedOrder = [];
   score = 0;
@@ -141,17 +141,3 @@ green.onclick = () => makeUserMove(0)
 red.onclick = () => makeUserMove(1)
 yellow.onclick = () => makeUserMove(2)
 blue.onclick = () => makeUserMove(3)
-
-
-
-
-function test(){
-  AddNewElementtoArray()
-  lvl = 1
-  AddNewElementtoArray()
-  lvl = 2
-  AddNewElementtoArray()
-  lvl = 3
-  AddNewElementtoArray()
-  showArray()
-}
