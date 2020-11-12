@@ -1,10 +1,25 @@
+:root {
+  --bg_color: #818181;
+  --blue: #0025a0;
+  --ligth-blue:#1b6bff;
+  --red:#ad0000;
+  --light-red:#ff0000;
+  --green:#059700;
+  --light-green:#51ff00;
+  --yellow:#979400;
+  --light-yellow:#fffb00;
+
+  --gap: 10px;
+  --circle-size: 55vh;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(129, 129, 129);
+  background-color: var(--bg_color);
 }
 .main-game {
   width: 100vw;
@@ -22,6 +37,28 @@ body {
   border: 1px solid #fff;
   background-color: #fff;
   border-radius: 100%;
-  width: 700px;
-  height: 700px;
+  width: var(--circle-size);
+  height: var(--circle-size);
 }
+
+.blue {
+  grid-area: blue;
+  background-color: var(--blue);
+  border-bottom-right-radius: 100%;
+}
+.red {
+  grid-area: red;
+  background-color: var(--red);
+  border-top-right-radius: 100%;
+}
+.yellow {
+  grid-area: yellow;
+  background-color: var(--yellow);
+  border-bottom-left-radius: 100%;
+}
+.green {
+  grid-area: green;
+  background-color: var(--green);
+  border-top-left-radius: 100%;
+}
+
