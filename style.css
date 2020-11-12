@@ -1,13 +1,9 @@
 :root {
   --bg_color: #818181;
   --blue: #003cff;
-  --ligth-blue:#1b6bff;
   --red:#ff0000;
-  --light-red:#ff0000;
   --green:#07db00;
-  --light-green:#51ff00;
   --yellow:#e0dd20;
-  --light-yellow:#fffb00;
 
   --gap: 10px;
   --circle-size: 55vh;
