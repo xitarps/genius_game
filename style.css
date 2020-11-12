@@ -1,12 +1,12 @@
 :root {
   --bg_color: #818181;
-  --blue: #0025a0;
+  --blue: #003cff;
   --ligth-blue:#1b6bff;
-  --red:#ad0000;
+  --red:#ff0000;
   --light-red:#ff0000;
-  --green:#059700;
+  --green:#07db00;
   --light-green:#51ff00;
-  --yellow:#979400;
+  --yellow:#e0dd20;
   --light-yellow:#fffb00;
 
   --gap: 10px;
@@ -34,11 +34,11 @@ body {
   grid-template-areas: 'verde vermelho' 
                        'amarelo azul';
   gap: 10px;
-  border: 1px solid #fff;
-  background-color: #fff;
+  background-color: #424242;
   border-radius: 100%;
   width: var(--circle-size);
   height: var(--circle-size);
+  box-shadow: 5px 8px 15px 5px #0000006c;
 }
 
 .blue {
@@ -62,3 +62,12 @@ body {
   border-top-left-radius: 100%;
 }
 
+.btn {
+  transition: 0.5s;
+  box-shadow: inset 0px 0px 30px 20px #00000028;
+}
+
+.selected{
+  opacity: 0.8;
+  box-shadow: 0 0 5px 5px #fff;
+}
