@@ -16,6 +16,8 @@ const red = $('.red');
 const green = $('.green');
 const yellow = $('.yellow');
 
+var btnAudio = document.getElementById("btnPress");
+
 //Game itself
 window.onload = () => {
   AddNewElementtoArray();
@@ -43,6 +45,7 @@ let checkInput = () => {
 
 //light pressed button
 let lightButton = (btn) =>{
+  btnAudio.play();
   switch (btn) {
     case 0:
       green.classList.add('selected')
@@ -57,6 +60,7 @@ let lightButton = (btn) =>{
       blue.classList.add('selected')
       break;
   }
+  btnAudio.currentTime = 0;
   setTimeout(() => {
     lightsOff();
   }, 1000);
