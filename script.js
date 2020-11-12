@@ -100,6 +100,7 @@ let showArray = () => {
   clearUserArray()
 }
 
+//clears user array for the round
 let clearUserArray = ()=> clickedOrder = [];
 
 //user move
@@ -115,6 +116,7 @@ let makeUserMove = (val) => {
   }
 }
 
+//increase level
 let nextLevel = () => {
   alert('Boa! vamos um passo adiante...')
   lvl++;
@@ -123,14 +125,18 @@ let nextLevel = () => {
   showArray()
 }
 
+//reset all data and restart game
 let restartGame = () => {
   alert(`Oops, você errou :(\nSua Pontuação é: ${score}\nVamos começar novamente :)!`)
   order = [];
   clickedOrder = [];
   score = 0;
   lvl = 0
+  AddNewElementtoArray()
+  showArray()
 }
 
+//set listener
 green.onclick = () => makeUserMove(0)
 red.onclick = () => makeUserMove(1)
 yellow.onclick = () => makeUserMove(2)
