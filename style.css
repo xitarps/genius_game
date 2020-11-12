@@ -18,7 +18,7 @@ body {
   display: grid;
   grid-template-areas: 'green red' 
                        'yellow blue';
-  grid-gap: 10px;
+  gap: 10px;
   border: 1px solid #fff;
   background-color: #fff;
   border-radius: 100%;
